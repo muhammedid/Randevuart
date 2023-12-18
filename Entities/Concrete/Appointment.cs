@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
+    //randevu
     public class Appointment
     {
         [Key]
