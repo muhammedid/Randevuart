@@ -46,7 +46,7 @@ namespace Core.DataAccess
             }
         }
 
-        public TEntity Insert(TEntity entity)
+        public TEntity Add(TEntity entity)
         {
             using (var db = new TContext())
             {

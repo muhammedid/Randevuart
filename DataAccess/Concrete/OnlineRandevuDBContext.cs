@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entities.Concrete;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,14 @@ namespace DataAccess.Concrete
 {
     public class OnlineRandevuDBContext : DbContext
     {
-        public OnlineRandevuDBContext()
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
 
-        public OnlineRandevuDBContext(DbContextOptions<OnlineRandevuDBContext> options) : base(options) { }
+        public DbSet<Business> Businesses { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
 
     }

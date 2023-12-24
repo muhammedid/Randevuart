@@ -1,13 +1,12 @@
-﻿using Entities.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.DTOs
+namespace DataAccess.Concrete
 {
-    public class CustomerDto: Customer
+    public class BusinessDal
     {
     }
 }

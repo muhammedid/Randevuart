@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities.DTOs
 {
-    internal class BusinessDto: Business
+    public class BusinessDto: Business
     {
     }
 }
