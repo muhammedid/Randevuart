@@ -21,5 +21,6 @@ namespace Entities.Concrete
         public string PhoneNumber { get; set; }
         public int CityCode { get; set; }        
         public int DistrictCode { get; set; }
+        public string Password  { get; set; }
     }
 }

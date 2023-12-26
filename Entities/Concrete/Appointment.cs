@@ -15,7 +15,7 @@ namespace Entities.Concrete
         public int ID { get; set; }
         public int BusinessID { get; set; }
         public int CustomerID { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; }=DateTime.Now;
         public int Status { get; set; } = 0;
     }
 }
