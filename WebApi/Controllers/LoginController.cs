@@ -5,24 +5,22 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
 {
-    public class LoginController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class LoginController : ControllerBase
     {
         IAuthService _authService;
 
         public LoginController(IAuthService authService)
         {
             _authService = authService;
-        }
+        }  
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+        [HttpGet("Login")]
         public IActionResult Login(LoginBussinesDto loginBussinesDto) 
         {
+            return Ok(_authService.Login(loginBussinesDto));
 
-            return (IActionResult)_authService.Login(loginBussinesDto);
         }
     }
 }

@@ -10,6 +10,6 @@ namespace Business.Abstract
 {
     public interface IAuthService
     {
-        IDataResult<Entities.Concrete.Business> Login(LoginBussinesDto loginDto);
+        IDataResult<Entities.DTOs.BusinessDto> Login(LoginBussinesDto loginDto);
     }
 }

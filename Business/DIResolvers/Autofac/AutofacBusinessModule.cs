@@ -17,6 +17,9 @@ namespace Business.DIResolvers.Autofac
         {
             builder.RegisterType<CustomerManager>().As<ICustomerService>().SingleInstance();
             builder.RegisterType<CustomerDal>().As<ICustomerDal>().SingleInstance();
+            builder.RegisterType<BusinessDal>().As<IBusinessDal>().SingleInstance();
+            builder.RegisterType<AuthManager>().As< IAuthService >().SingleInstance();
+
         }
     }
 }

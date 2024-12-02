@@ -9,5 +9,6 @@ namespace Entities.DTOs
 {
     public class BusinessDto: Business
     {
+        public string JWTToken  { get; set; }
     }
 }
